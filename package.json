@@ -1,0 +1,31 @@
+{
+  "name": "next-bun-biome",
+  "version": "1.0.0",
+  "description": "Project bootstrapped with create-next-app and biome",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "check": "bunx biome check --error-on-warnings ./src",
+    "check:fix": "bunx biome check --fix ./src",
+    "check:fix-unsafe": "bunx biome check --fix --unsafe ./src"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "lefthook": "^1.10.10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

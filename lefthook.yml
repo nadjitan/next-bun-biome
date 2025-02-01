@@ -1,0 +1,19 @@
+pre-push:
+  jobs:
+    - name: Build project
+      run: bun run build
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: Biome check
+      glob: "*.{ts,tsx,json}"
+      exclude:
+        - .lefthook/**
+        - public/**
+      run: bunx biome check --error-on-warnings {staged_files}
+
+commit-msg:
+  scripts:
+    "commitlint.sh":
+      runner: bash
